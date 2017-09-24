@@ -5,7 +5,7 @@
     <title>显示KaptchaServlet生成的验证码</title>
     <script type="text/javascript" src="/js/jquery.js"></script>
     <script type="text/javascript">
-        //点击切换验证码
+       /* //点击切换验证码
         function changeVerifyCode(){
             $("#yzmImg").attr("src","Kaptcha.jpg?"+Math.floor(Math.random()*100));
         }
@@ -34,14 +34,14 @@
                     }
                 });
             }
-        }
+        }*/
     </script>
 </head>
 
 <body>
 <form>
     <table>
-        <tr>
+        <%--<tr>
             <td>
                 请输入验证码：
             </td>
@@ -58,7 +58,12 @@
             <td>
                 <input type="button" value="提交" onclick="doSubmit()">
             </td>
-        </tr>
+        </tr>--%>
+        <form action="login">
+            username:<input type="text" name="username" /><br/>
+            password:<input type="text" name="password" /><br/>
+            <input type="submit"/>
+        </form>
     </table>
 </form>
 </body>

@@ -11,7 +11,8 @@ import java.io.PrintWriter;
  * Created by zdy on 2017/9/24.
  */
 public class SimpleServlet extends HttpServlet {
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         PrintWriter out = response.getWriter();
         String serviceDesc = SimpleService.getServiceDescription();
         out.print(serviceDesc);
